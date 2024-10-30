@@ -1,3 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root{
+    --main-color: #FF5656;
+}
+
 body{
+    padding: 0;
+    padding-top: 80px;
+    margin: 0;
     background-color: #0C0C0C;
+    font-family: "Nunito";
+}
+
+* {
+    border: 1px solid transparent;
+}
+
+header {
+    position: fixed;
+    padding-left: 30px;
+    padding-right: 30px;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-between; /* Centre les éléments horizontalement */
+    align-items: center; /* Centre les éléments verticalement */
+    height: 80px;
+}
+
+header > div {
+    display: flex; /* Flex pour les éléments à l'intérieur de la div */
+    align-items: center; /* Centre verticalement */
+}
+
+#logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    height: 50%;
+}
+
+#logo path{
+    fill-rule:evenodd;
+    clip-rule:evenodd;
+    fill: var(--main-color);
+    filter: drop-shadow(0px 0px 15px rgb(97, 32, 32));
+}
+
+header .bi-list {
+    font-size: 30px;
+    color: #9D9D9D;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+header a {
+    transition: 0.7s;
+    transform: translateY(0%);
+    color: #9D9D9D;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+header a:hover{
+    transition: 1s;
+    color: rgb(255, 255, 255);
+}
+
+header a.actual{
+    color: white;
+}
+
+#infos-page{
+    position: relative;
+
+}
+
+#info-bulle {
+    position: relative;
+    margin: 0px 30px; /* 20px en haut et en bas, 30px à gauche et à droite */
+    
+    padding: 20px;
+    padding-right: 80px;
+
+    background-color: #1D1D1D;
+    color: #b7b7b7;
+    font-size: 12px;
+
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0px 0px 20px rgb(12, 12, 12);
+}
+
+#info-bulle i {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #7f7f7f;
+    cursor: pointer;
 }
